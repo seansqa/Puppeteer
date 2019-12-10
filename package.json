@@ -1,0 +1,35 @@
+{
+  "name": "eligibility-e2e",
+  "version": "1.0.0",
+  "private": true,
+  "license": "proprietary",
+  "description": "Puppeteer end to end tests",
+  "author": "TELUS",
+  "engines": {
+    "node": ">=8"
+  },
+  "devDependencies": {
+    "@telus/eslint-config": "^2.0.1",
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.15.0",
+    "eslint-plugin-jest": "^22.1.3",
+    "eslint-plugin-jsx-a11y": "^6.1.2",
+    "eslint-plugin-react": "^7.12.4",
+    "jest-circus": "^24.8.0",
+    "jest-cli": "^24.8.0",
+    "jest-environment-node": "^24.8.0",
+    "jest-puppeteer": "^4.2.0",
+    "puppeteer": "^1.17.0"
+  },
+  "scripts": {
+    "e2e": "jest",
+    "e2e:headless": "HEADLESS=true npm run e2e",
+    "e2e:test": "set ENV=test&& npm run e2e",
+    "e2e:development": "set ENV=development&& npm run e2e",
+    "e2e:test:headless": "set HEADLESS=true&& set ENV=test&& npm run e2e",
+    "e2e:prod": "set ENV=production&& npm run e2e",
+    "e2e:prod:headless": "set HEADLESS=true&& set ENV=prod&& npm run e2e",
+    "e2e:watch": "npm run e2e -- --watchAll"
+  }
+}
